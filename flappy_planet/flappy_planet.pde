@@ -107,11 +107,11 @@ class Player{
     }
     updateCoord();
     updateAngleView();
+    pushMatrix();
     translate(coord.x,  coord.y);
     rotate(angleView);
   image(rocket,  -rocket.width/2, -rocket.height/2);
-  rotate(-angleView);
-translate(-coord.x,  -coord.y);
+  popMatrix();
   
   
   }
